@@ -1,4 +1,9 @@
 function yourtolate() {
     const audioPlayer = document.getElementById("audioPlayer");
-    audioPlayer.play(); 
+    if (audioPlayer.paused || audioPlayer.ended) {
+        audioPlayer.play(); 
+    } else {
+        audioPlayer.pause();
+    }
 }
+
